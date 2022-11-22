@@ -1,14 +1,9 @@
 'use strict';
 
-/**
- * JavaScript Basics
+/*--------------------------------------------------------------------------- *
+ * Shape Factory
  * Jodi-Ann Barrett
  * 
- * The audio object
- * 
- * The Audio() constructor creates and returns a new HTMLAudioElement which can be 
- * either attached to a document for the user to interact with and/or listen to, 
- * or can be used offscreen to manage and play audio
  * */
 
 // Utility Functions 
@@ -27,3 +22,5 @@ function print(arg) {
 }
 
 /**--------------------------------------------------------------------------- */
+
+export { print, select, onEvent };
