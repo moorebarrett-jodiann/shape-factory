@@ -25,6 +25,8 @@ body {
 .container {
     width: min(100% - 30px, 1080px);
     margin-inline: auto;
+    display: grid;
+    place-items: center;
 }
 
 /**************************************************/
@@ -44,144 +46,86 @@ p {
     font-size: 17px;
 }
 
-.error i, .error span {
-    color: var(--app-red);
-}
-
-.warn i, .warn span {
-    color: var(--app-yellow);
-}
-
-.center .clock-container .form form input.warn {
-    color: var(--app-yellow);
-    position: relative;
-    animation: shake .1s linear;
-    caret-color: var(--app-white);
-}
-    
-@keyframes shake {
-    0% { left: -5px; }
-    100% { right: -5px; }
-}
-
 .flexbox {
     display: flex;
-    justify-content: center;
 }
 
-.center {
-    height: 100vh;
-    display: grid;
-    place-items: center;
-}
-
-.center .clock-container {
-    width: 100%;
-    height: 50%;
-    display: grid;
-    place-items: center;
-    padding: 10px 0px;
-}
-
-.center .clock-container .clock {
-    width: 100%;
-    height: 80%;
-    display: grid;
-    place-items: center;
-}
-
-.center .clock-container .clock p {
-    font-size: 100px;
-    font-weight: 700;
-    color: var(--app-white);
-}
-
-.center .clock-container .message-container {
-    width: 20%;
-    height: 45px;
-    background-color: rgba(12, 14, 20, 0.8);
-    border-radius: 4px;
-    font-size: 17px;
-    font-weight: 400;
-    color: var(--app-white);
-    text-align: center;
-    display: grid;
-    place-items: center;
-}
-
-.center .clock-container .message-container .message {
-    font-size: 18px;
-    font-weight: 500;
-    color: var(--app-white);
-}
-
-.center .clock-container .message-container .message i {
+.flexbox > select {
     margin-right: 10px;
 }
 
-.center .clock-container .form {
-    height: 100%;
-    padding: 10px 0px;
+.grid {
     display: grid;
-    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.27);
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    gap: 1rem;
 }
 
-.center .clock-container .form form input {
-    width: 50%;
+.shape-factory {
+    height: 100vh;
+}
+
+.main-container {
+    padding: 20px;
+    height: 500px;
+    width: 500px;
+    text-align: center;
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+}
+
+.shape-factory h1 {
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.form {
+    margin-bottom: 20px;
+}
+
+.form select {
+    width: 40%;
     height: 45px;
     padding: 0 15px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    background-color: rgba(255, 255, 255, 0.08);
-    border-radius: 50px;
+    /* background-color: rgba(255, 255, 255, 0.08); */
+    border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
     font-size: 17px;
     font-weight: 400;
-    color: var(--app-white);
+    /* color: #fff; */
     text-align: left;
 }
 
-.center .clock-container .form form input:focus {
+.form select::selection {
+    color: #fff;
+}
+
+.form select:focus {
     border: 1px solid rgba(255, 255, 255, .25);
 }
 
-.center .clock-container .form form input::placeholder {
-    color: rgba(244, 246, 248, 0.25);
-}
-
-.center .clock-container .form form button {
-    width: 50%;
+.form button {
+    width: 20%;
     height: 45px;
-    margin-left: 10px;
-    border-radius: 50px;
+    text-align: center;
+    border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
     font-size: 17px;
     font-weight: 600;
     letter-spacing: 0.2px;
     transition: all 0.25s ease-in-out;
-    color: var(--app-white);
+    background-color: var(--app-orange);
+    color: #fff;
     padding: 0 10px;
 }
 
-.center .clock-container .form form button.start {
-    border: 1px solid var(--app-blue);
-    background-color: var(--app-blue);
-}
-
-.center .clock-container .form form button.start:hover {
-    background-color: var(--app-blue-hover);
-    border: 1px solid rgba(255, 255, 255, .25);
-}
-
-.center .clock-container .form form button.snooze {
-    display: none;
-}
-
-.center .clock-container .form form button.snooze {
-    border: 1px solid var(--app-green);
-    background-color: var(--app-green);
-}
-
-.center .clock-container .form form button.snooze:hover {
-    background-color: var(--app-green-hover);
-    border: 1px solid rgba(255, 255, 255, .25);
+.form button:hover {
+    background-color: var(--app-orange-hover);
 }
