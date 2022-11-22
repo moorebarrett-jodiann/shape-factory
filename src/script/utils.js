@@ -16,6 +16,11 @@ function select(selector, parent = document) {
   return parent.querySelector(selector);
 }
 
+// Select all HTML element by class, id and html element
+function selectAll(selector, parent = document) {
+  return parent.querySelectorAll(selector);
+}
+
 // Print
 function print(arg) {
   console.log(arg);
@@ -23,4 +28,4 @@ function print(arg) {
 
 /**--------------------------------------------------------------------------- */
 
-export { print, select, onEvent };
+export { print, select, selectAll, onEvent };
