@@ -18,6 +18,7 @@ const info = select('.info');
 const shapeArray = [];
 /**-------------------------------------------------------------------------- */
 
+// create shape objects and initialize click events on each object
 onEvent('click', create, function(event) {
   event.preventDefault();
 
@@ -25,45 +26,46 @@ onEvent('click', create, function(event) {
     const shape = new Shape();
     shape.name = shapeName.value;
     shape.color = hexToString(shapeColor.value);
+    console.log(shape);
     shapeArray.push(shape);
       
     var obj = document.createElement('div');
     obj.classList.add(shapeName.value);
     obj.style.backgroundColor = shapeColor.value;
-    obj.style.display = 'inline-block';
     gridBox.appendChild(obj);
     onEvent('click', obj, () => {
       getObjInfo(shape);
     });
    
   } else {
-    info.innerHTML = `<p>Container is Full</p>`;
+    info.innerHTML = `<p>Container is Full!</p>`;
   }
   
 });
 
+// function to get object info from Shape class
 function getObjInfo( obj ) {
-
   let index = shapeArray.indexOf(obj) + 1;  
   info.innerHTML = `<p> Unit ${index}: ${obj.getInfo()}</p>`;
 }
 
+// Convert hex code to string value
 function hexToString( code ) {
   switch(code) {
     case '#079':
-      return 'Blue';
+      return 'blue';
       break; 
     case '#9f0':
-      return 'Green';
+      return 'green';
       break; 
     case '#f90':
-      return 'Orange';
+      return 'orange';
       break; 
     case '#f09':
-      return 'Pink';
+      return 'pink';
       break; 
     case '#90f':
-      return 'Purple';
+      return 'purple';
       break; 
   }
 }
