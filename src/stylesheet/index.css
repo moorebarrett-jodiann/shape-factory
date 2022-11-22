@@ -25,8 +25,8 @@ body {
 .container {
     width: min(100% - 30px, 1080px);
     margin-inline: auto;
-    /* display: grid;
-    place-items: center; */
+    display: grid;
+    place-items: center;
 }
 
 /**************************************************/
@@ -56,8 +56,8 @@ p {
 
 .grid {
     display: grid;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background-color: rgba(0, 0, 0, 0.27);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     height: 100%;
     width: 100%;
@@ -69,10 +69,6 @@ p {
 
 .grid > div.circle {
     border-radius: 50px;
-}
-
-.grid > div.square {
-    border-radius: 4px;
 }
 
 .grid > div.square {
@@ -105,16 +101,14 @@ p {
     width: 40%;
     height: 45px;
     padding: 0 15px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: var(--app-dark-bg);
+    background-color: #222739;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
     font-size: 17px;
     font-weight: 400;
     text-align: left;
-}
-
-.form select::selection {
-    color: #fff;
+    color: var(--app-white);
 }
 
 .form select:focus {

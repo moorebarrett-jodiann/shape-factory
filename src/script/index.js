@@ -22,7 +22,6 @@ onEvent('click', create, function(event) {
   event.preventDefault();
 
   if(shapeArray.length < 24) {
-
     const shape = new Shape();
     shape.name = shapeName.value;
     shape.color = hexToString(shapeColor.value);
