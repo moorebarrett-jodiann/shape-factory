@@ -76,7 +76,7 @@ class Shape {
 
 In the **Shape** class, getter and setter methods 'get' and set' the values for the ```name``` and ```shape``` properties.
 
-The getInfo() method returns the value of the properties by invoking their respective getter functions 
+The **getInfo()** method returns the value of the properties by invoking their respective getter functions 
 ```js
 ${this.color} ${this.name}
 ```
@@ -85,4 +85,4 @@ ${this.color} ${this.name}
 
 To run the application in the browser:
 
-- run `npm run dev` in the Terminal in the root path of the repository package.
+- run `npm run dev` in the terminal in the root path of the repository package.
