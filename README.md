@@ -63,7 +63,9 @@ Dependencies:
 A class is a blueprint for objects. Classes have members, that are fields, constructors and methods.
 **In EcmaScript, classes are just objects.**
 
-For this application, the class **Shape** initializes the ```name``` and ```color``` properties of a shape in it's constructor.
+For this application, the class **Shape** initializes the ```name``` and ```color``` properties of a shape in it's constructor. 
+Note their protected property names contain the '_' character at the beginning. This is to ensure that there is no name collision whent their values
+are handled by the set and get functions.
 
 ```js
 class Shape {
@@ -76,7 +78,7 @@ class Shape {
 
 In the **Shape** class, getter and setter methods 'get' and set' the values for the ```name``` and ```shape``` properties.
 
-The **getInfo()** method returns the value of the properties by invoking their respective getter functions 
+The **getInfo()** method returns the value of the public properties by invoking their respective getter functions. 
 ```js
 ${this.color} ${this.name}
 ```
