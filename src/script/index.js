@@ -23,16 +23,22 @@ onEvent('click', create, function(event) {
   event.preventDefault();
 
   if(shapeArray.length < 24) {
+    //create shape object
     const shape = new Shape();
     shape.name = shapeName.value;
     shape.color = hexToString(shapeColor.value);
-    console.log(shape);
+    
+    //add object to array
     shapeArray.push(shape);
       
+    // create html shape
     var obj = document.createElement('div');
     obj.classList.add(shapeName.value);
     obj.style.backgroundColor = shapeColor.value;
     gridBox.appendChild(obj);
+
+    // add click event listener to the html shape and call the corresponding 
+    // objInfo() method to get the property information
     onEvent('click', obj, () => {
       getObjInfo(shape);
     });
