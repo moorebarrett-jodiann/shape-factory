@@ -20,7 +20,7 @@ Set the **type** attribute on the HTML markup to **'module'**:
 <script src="...path/index.js" type="module"></script>
 ```
 
-Initialize packages.json file setup:
+Initialize package.json file setup:
 
 ```sh
 npm init -y
