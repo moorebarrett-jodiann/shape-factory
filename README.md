@@ -26,7 +26,7 @@ Initialize packages.json:
 npm init -y
 ```
 
-Install the **lite-server** package with [NPM](https://www.npmjs.org/) and create a local dev environment:
+Install the **lite-server** package with [npm](https://www.npmjs.org/) and create a local dev environment:
 
 ```sh
 npm install lite-server --save-dev
