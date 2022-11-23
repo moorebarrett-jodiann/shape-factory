@@ -37,7 +37,7 @@ class Shape {
     }
     
     getInfo() {
-        return `${this.color} ${this.name} `;
+        return `${this.color} ${this.name}`;
     }
 }
 
