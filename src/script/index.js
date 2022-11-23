@@ -37,8 +37,8 @@ onEvent('click', create, function(event) {
     obj.style.backgroundColor = shapeColor.value;
     gridBox.appendChild(obj);
 
-    // add click event listener to the html shape and call the corresponding 
-    // objInfo() method to get the property information
+    // add click event listener to the html shape and call the objInfo() method 
+    // to get the property information on the current object
     onEvent('click', obj, () => {
       getObjInfo(shape);
     });
