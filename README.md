@@ -14,7 +14,7 @@ Lightweight JavaScript shape generator application, deployed in a dev environmen
 
 ## Usage
 
-Set type attribute on the HTML markup to 'module':
+Set the **type** attribute on the HTML markup to 'module':
 
 ```html
 <script src="...path/index.js" type="module"></script>
