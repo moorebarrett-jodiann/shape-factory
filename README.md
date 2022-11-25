@@ -9,7 +9,7 @@
 
 ## Description
 
-Lightweight JavaScript shape generator application, deployed in a dev environment running on [lite-server](https://www.npmjs.com/package/light-server)
+Lightweight JavaScript shape generator application, built using EcmaScript (ES) modules and [lite-server](https://www.npmjs.com/package/light-server)
 
 
 ## Usage
