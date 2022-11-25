@@ -73,7 +73,7 @@ p {
     animation: appear 0.3s ease-in;
 }
 .grid > div.circle {
-    border-radius: 50px;
+    border-radius: 50%;
 }
 
 .grid > div.square {

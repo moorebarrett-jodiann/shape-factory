@@ -65,7 +65,7 @@ function drawShape(name, color, sides) {
       break;
     case 3:
       htmlShape.innerHTML = `
-      <svg>
+      <svg viewBox="0 0 100 100">
           <polygon points="50 0, 100 100, 0 100" fill="${shapeCol}"/>
       </svg>`;
       break;
@@ -75,13 +75,13 @@ function drawShape(name, color, sides) {
       break;
     case 5:
       htmlShape.innerHTML = `
-      <svg>
+      <svg viewBox="0 0 100 100">
         <polygon points="18,100 0,40 50,0 100,40 80,100" fill="${shapeCol}"/>
       </svg>`;
       break;
     case 6:
       htmlShape.innerHTML = `
-      <svg>
+      <svg viewBox="0 0 100 100">
         <polygon points="23,100 0,50 23,0 76,0 100,50 76,100" fill="${shapeCol}"/>
       </svg>`;
       break;
