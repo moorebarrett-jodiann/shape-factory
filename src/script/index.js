@@ -21,6 +21,7 @@ const shapeArray = [];
 // create shape objects and initialize click events on each object
 onEvent('click', create, function(event) {
   event.preventDefault();
+  let numOfSides = Number(shapeName.options[shapeName.selectedIndex].text);
 
   if(shapeArray.length < 24) {
     //create shape object
@@ -31,15 +32,13 @@ onEvent('click', create, function(event) {
     //add object to array
     shapeArray.push(shape);
       
-    // create html shape
-    var obj = document.createElement('div');
-    obj.classList.add(shapeName.value);
-    obj.style.backgroundColor = shapeColor.value;
-    gridBox.appendChild(obj);
+    // draw shape and add to grid box
+    let div = drawShape(shapeName.value, shapeColor.value, numOfSides);
+    gridBox.appendChild(div);
 
     // add click event listener to the html shape and call the objInfo() method 
     // to get the property information on the current object
-    onEvent('click', obj, () => {
+    onEvent('click', div, () => {
       getObjInfo(shape);
     });
    
@@ -48,6 +47,53 @@ onEvent('click', create, function(event) {
   }
   
 });
+
+// function to draw shape
+function drawShape(name, color, sides) {
+
+  let shapeNam = name;
+  let shapeCol = color;
+  let numOfSides = sides;
+
+  // create html shapes
+  var htmlShape = document.createElement('div');
+
+  switch(numOfSides) {
+    case 0:
+      htmlShape.classList.add(shapeNam);
+      htmlShape.style.backgroundColor = shapeCol;
+      break;
+    case 3:
+      htmlShape.innerHTML = `
+      <svg>
+          <polygon points="50 0, 100 100, 0 100" fill="${shapeCol}"/>
+      </svg>`;
+      break;
+    case 4:
+      htmlShape.classList.add(shapeNam);
+      htmlShape.style.backgroundColor = shapeCol;
+      break;
+    case 5:
+      htmlShape.innerHTML = `
+      <svg>
+        <polygon points="18,100 0,40 50,0 100,40 80,100" fill="${shapeCol}"/>
+      </svg>`;
+      break;
+    case 6:
+      htmlShape.innerHTML = `
+      <svg>
+        <polygon points="23,100 0,50 23,0 76,0 100,50 76,100" fill="${shapeCol}"/>
+      </svg>`;
+      break;
+    default:
+      htmlShape.innerHTML = ``;
+  }
+
+  if(numOfSides = 3) {
+  }
+
+  return htmlShape;
+}
 
 // function to get object info from Shape class
 function getObjInfo( obj ) {
@@ -79,4 +125,6 @@ function hexToString( code ) {
 // when page is reloaded clear grid 
 onEvent('load', window, () => {
   gridBox.innerHTML = '';
+  shapeName.value = '';
+  shapeColor.value = '';
 });

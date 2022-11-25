@@ -69,14 +69,15 @@ p {
     transform: rotateX(180deg);
 }
 
+.grid > div {
+    animation: appear 0.3s ease-in;
+}
 .grid > div.circle {
     border-radius: 50px;
-    animation: appear 0.3s ease-in;
 }
 
 .grid > div.square {
     border-radius: 4px;
-    animation: appear 0.3s ease-in;
 }
 
 @keyframes appear {
