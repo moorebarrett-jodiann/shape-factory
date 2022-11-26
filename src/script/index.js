@@ -82,16 +82,25 @@ function drawShape(name, color, sides) {
     case 6:
       htmlShape.innerHTML = `
       <svg viewBox="0 0 100 100">
-        <polygon points="23,100 0,50 23,0 76,0 100,50 76,100" fill="${shapeCol}"/>
+        <polygon points="22,100 0,50 22,0 78,0 100,50 78,100" fill="${shapeCol}"/>
+      </svg>`;
+      break;
+    case 8:
+      htmlShape.innerHTML = `
+      <svg viewBox="0 0 100 100">
+        <polygon points="26,100 0,71 0,30 26,0 72,0 100,30 100,71 72,100" fill="${shapeCol}"/>
+      </svg>`;
+      break;
+    case 10:
+      htmlShape.innerHTML = `
+      <svg viewBox="0 0 100 100">
+        <polygon points="50,0 60.5,39.5 100,40.1 67,59.5 76.4,100 50,71.9 16,95 32.9,59.5 0,40.1 39.4,39.5" fill="${shapeCol}"/>
       </svg>`;
       break;
     default:
       htmlShape.innerHTML = ``;
   }
-
-  if(numOfSides = 3) {
-  }
-
+  
   return htmlShape;
 }
 
